@@ -4,4 +4,10 @@ CMD ["echo", "Hello World Test"]
 
 # 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
 
+
+# echo "github acces token" | docker login ghcr.io -u githubUsername --password-stdin
+# docker build -t nameImage .
+# docker tag hello ghcr.io/githubUsername/nameImage:latest
+# docker push ghcr.io/githubUsername/nameImage
+
 # echo "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" | docker login ghcr.io -u manucu2k --password-stdin
