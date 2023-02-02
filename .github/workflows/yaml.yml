@@ -1,21 +1,22 @@
-name: Build-Docker-Image 
+name: dockerImage 
 on:
   push: 
     branches: [ main ]
   pull_request: 
     branches: [ main ]
   jobs: 
-    runs-on: ubuntu-latest 
-    env: 
-      TAG: mypackagesimage 
-      PAT: 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
-      USER: manucu2k
-      REGISTRY: ghcr.io
-      VERSION: latest
+    dockerImage
+      runs-on: ubuntu-latest 
+      
+      steps:  
+        - name: Checkout 
+          uses: actions/checkout@v2
+        
+        - name: Login to GHCR
+          run:  |
+            echo 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 | docker login ghcr.io -u manucu2k --password-stdin 
+            docker tag mypackagesimage ghcr.io/manucu2k/mypackagesimage:latest 
+            docker push ghcr.io/manucu2k/mypackagesimage:latest 
 
-    steps:
-      - name: Checkout 
-        uses: actions/checkout@v2
-
-      - name: Build Docker Image 
-        run: docker build . -t $TAG 
+        - name: Build Docker Image 
+          run: docker build . -t $TAG 
