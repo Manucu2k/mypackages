@@ -15,7 +15,7 @@ jobs:
       matrix:
         node-version: [ 16 ]
         mongodb: [ 5 ]
-        FTP_SERVER: ftp.samkirkland.com
+        FTP_SERVER: [ftp.samkirkland.com]
 
     steps:
       - name: Checkout
