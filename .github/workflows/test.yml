@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: [ ubuntu-latest , windows-latest ] 
 
     strategy:
       matrix:
@@ -29,8 +29,11 @@ jobs:
         uses: supercharge/mongodb-github-action@1.6.0  
         with: 
           mongodb-version: '5.0.14'
-      #- name: Build Docker Image 
-      #   run: docker build . -t imagetest
-      #- run: npm ci
-      #- run: npm run build --if-present
-     # - run: npm test
+
+      
+
+#- name: Login to GHCR
+#  run: |
+#    echo $PAT | docker login ghcr.io -u $USER --password-stdin 
+#    docker tag $TAG ${{ env.REGISTRY }}/$USER/$TAG:${{ env.VERSION }} 
+#    docker push ${{ env.REGISTRY }}/$USER/$TAG:${{ env.VERSION }} 
