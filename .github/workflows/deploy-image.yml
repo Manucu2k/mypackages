@@ -12,6 +12,7 @@ on:
       USER: manucu2k
       REGISTRY: ghcr.io
       VERSION: latest
+
     steps:
       - name: Login to GHCR
         run:  |
