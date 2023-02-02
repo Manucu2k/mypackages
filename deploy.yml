@@ -12,7 +12,7 @@ on:
         USER: manucu2k
         REGISTRY: ghcr.io
         VERSION: latest
-        DATABASE_URL: mongodb://localhost/test
+        MONGO_URL: mongodb://localhost/test
         CI: true
 
       runs-on: ubuntu-latest 
