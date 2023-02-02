@@ -32,10 +32,14 @@ jobs:
 
       - name: deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          server: ftp.samkirkland.com
-          username: myFtpUserName
-          password: ${{ secrets.ftp_password }}
+        #with:
+          #server: ftp.samkirkland.com
+          #username: myFtpUserName
+          #password: ${{ secrets.ftp_password }}
+          #target-server: example.com
+          #remote-user: username
+          #private-ssh-key: ${{ secrets.SSH_KEY }}
+          #destination-path: ~/destinationFolder/
 
 
       
