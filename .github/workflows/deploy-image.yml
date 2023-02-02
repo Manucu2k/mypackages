@@ -7,8 +7,8 @@ on:
   jobs: 
     runs-on: ubuntu-latest 
     env: 
-      TAG: dockerIMG-test 
-      PAT: ${{ secrets.GITHUB_TOKEN }} 
+      TAG: dockerIMG 
+      PAT: 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
       USER: manucu2k
       REGISTRY: ghcr.io
       VERSION: V1
