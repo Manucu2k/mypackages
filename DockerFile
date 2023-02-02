@@ -1,6 +1,6 @@
 FROM alpine
 
-CMD ["echo", "Hello World Test"]
+CMD ["echo", "Hello World Test From Docker File"]
 
 # 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
 
