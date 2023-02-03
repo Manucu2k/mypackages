@@ -33,9 +33,10 @@ jobs:
       - name: FPT-Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ftp.samkirkland.com
-          username: manu22k
-          password: avionn2@K
+          server: ftp.smartboxdigital.com
+          username: manu@smartboxdigital.com
+          password: Ya3r3bO;]URf
+          post: 21
         
 
 
